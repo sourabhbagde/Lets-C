@@ -3,8 +3,11 @@
 
 // a function to do AND operation on operands a,b.
 int andOperator(int *a, int *b, int bits){
+    // int and_result[bits] = {0}; // This is not allowed in C for local arrays. Fixed-size arrays must be known at compile time.
+    // then how??? - use of malloc() or calloc()
     
-    for (int j = 0; j < bits; j++){
+    for (int j = 0; j < bits; j++)
+    {
         printf("Printing...%d %d\n", a[j], b[j]);
     }
         return 0;
