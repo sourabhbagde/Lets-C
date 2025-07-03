@@ -1,0 +1,33 @@
+// Write a function named count_short_strings that accepts an array of strings (as char*[]) 
+// and the size of the array as an integer, and returns the number of strings in the array 
+// that have length less than or equal to 3. For example, if strs is defined as 
+// char* strs[] = {"moo", "boo", "ba", "mood"};, then the call count_short_strings(strs, 4) returns 3. 
+// You may assume that the size argument correctly represents the size of the array.
+
+#include<stdio.h>
+#include<stdlib.h> // for malloc(), realloc()...
+
+int count_short_strings(char*[]);
+int count_short_strings(char*[]){
+    // fixed-length array for small arrays and best if known array size at compile time + stored on stack (faster).
+    // int short_strings[10];
+    // dynamic array - for large arrays and if known at runtime + stored on heap (prevents stack overflow for large arrays)
+    // use of malloc(), calloc() or realloc() - always free() memory to avoid memory leaks.
+    
+    return 0;
+}
+
+int main(){
+    int size;
+    printf("Enter the count of the strings:");
+    scanf("%d", &size);
+    // clear newline left by scanf - getchar() is used.
+    getchar();
+    // allocate array of string pointers.
+    char **strs = (char **)malloc(size * sizeof(char *));
+    if (strs == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+    return 0;
+}
